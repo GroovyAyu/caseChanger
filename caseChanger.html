@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-<script>
-function caseChange()
-{
-  var txt = document.getElementById("fInput").value;
-  var newtxt = "";
-  
-  for (var i = 0; i < txt.length; i++)
-  {
-      if (i % 2 == 1)
-          newtxt += txt.charAt(i).toUpperCase();
-      else
-          newtxt += txt.charAt(i).toLowerCase();
-  }
-  
-  document.getElementById("fOutput").innerHTML = newtxt;
-}
-</script>
-</head>
-<body>
+  <head>
+    <script>
+      function caseChange()
+      {
+        var txt = document.getElementById("fInput").value;
+        var newtxt = "";
 
-<h2>CaseChanger</h2>
+        for (var i = 0; i < txt.length; i++)
+        {
+            if (i % 2 == 1)
+                newtxt += txt.charAt(i).toUpperCase();
+            else
+                newtxt += txt.charAt(i).toLowerCase();
+        }
 
-<label for="fInput">Input:</label>
-<input type="text" id="fInput" name="fInput"><br><br>
+        document.getElementById("fOutput").innerHTML = newtxt;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>CaseChanger</h2>
 
-<button type="button" onclick="caseChange()">Change case!</button>
+    <label for="fInput">Input:</label>
+    <input type="text" id="fInput" name="fInput"><br><br>
 
-<p id="fOutput"></p>
+    <button type="button" onclick="caseChange()">Change case!</button>
 
-</body>
+    <p id="fOutput"></p>
+
+  </body>
 </html> 
